@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter JS plugin</title>
+    <style>
+        /*  
+         *  Counter-Up
+         *  https://github.com/bfintal/Counter-Up
+         *
+         *  Counter-Up2 is also available
+         *  https://github.com/bfintal/Counter-Up2
+         * 
+         */
+
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .top, .mid, .bottom {
+            height: 1200px;
+        }
+
+        .top {
+            background: lightgray;
+        }
+
+        .bottom {
+            background: tomato;
+        }
+
+        .countMe {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        div {
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.4rem;
+        }
+
+        .counter {
+            font-size: 2.4rem;
+            font-weight: bold;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .countMe {
+                flex-direction: column;
+            }
+        }
+
+        /*
+         * Problem 1:
+         * Q. How to make counteup jquery plugin run only once?
+         * https://stackoverflow.com/questions/49001063/how-to-make-counterup-jquery-plugin-run-only-once 
+         * 
+         */
+    </style>
+</head>
+<body>
+
+    <section class="countMe">
+        <div>
+            <p>Twitter Followers</p>
+            <span class="counter">300</span>
+        </div>
+        <div>
+            <p>Facebook Followers</p>
+            <span class="counter">500</span>
+        </div>
+        <div>
+            <p>Instagram Followers</p>
+            <span class="counter">900</span>
+        </div>
+    </section>
+
+    <!-- <section class="top">
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, eveniet est! Praesentium quos saepe sapiente numquam nesciunt laudantium, reiciendis maiores facilis iste minus enim exercitationem placeat labore cupiditate aut rem.
+        </p>
+    </section>
+    
+    <section class="mid">
+        <span class="counter">11,000000</span>
+        <span class="counter">200</span>
+    </section>
+
+    <section class="bottom">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae soluta corrupti assumenda eligendi distinctio perferendis omnis nobis commodi quo odio, vero quibusdam rem et error vel qui, sapiente quod deserunt!
+        </p>
+    </section> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/jquery.counterup.min.js"></script>
+    <script>
+        $('.counter').counterUp({
+            delay: 10,
+            time: 1000
+        });
+    </script>
+</body>
+</html>
